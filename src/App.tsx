@@ -1,16 +1,14 @@
-import Home from '@components/Home'
-import { RecoilRoot } from 'recoil'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { Button } from './components'
 
-const App = () => {
+import './App.css'
+
+
+function App() {
+
   return (
-    <RecoilRoot>
-      <Router>
-        <Routes>
-          <Route path={'/'} element={<Home />} />
-        </Routes>
-      </Router>
-    </RecoilRoot>
+    <>
+      <Button background={'red'}/>
+    </>
   )
 }
 
