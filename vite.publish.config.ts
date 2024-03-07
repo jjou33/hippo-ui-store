@@ -55,6 +55,10 @@ export default defineConfig({
         find: '@assets',
         replacement: resolve(__dirname, './src/assets'),
       },
+      {
+        find: '@',
+        replacement: resolve(__dirname, './src'),
+      },
     ],
   },
 })

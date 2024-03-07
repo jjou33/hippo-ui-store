@@ -1,6 +1,8 @@
 import { ButtonHTMLAttributes } from 'react'
 import { ButtonContainer } from './styled'
 
+import type { ButtonVariant } from '@/types/common'
+
 export interface ButtonBaseProps {
   variant?: ButtonVariant
   label?: string
