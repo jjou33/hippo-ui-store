@@ -2,12 +2,12 @@ import { Button } from './components'
 
 import './App.css'
 
-
-function App() {
-
+const App = () => {
   return (
     <>
-      <Button background={'red'}/>
+      <Button variant={'square'} label={'button'}>
+        {'BUTTON'}
+      </Button>
     </>
   )
 }

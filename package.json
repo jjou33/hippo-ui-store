@@ -1,7 +1,8 @@
 {
-  "name": "@hippo/ds",
-  "version": "1.0.0",
+  "name": "@hippodev/design-system",
+  "version": "0.1.6",
   "description": "Hippo Dev Design System for Application",
+  "private": false,
   "keywords": [
     "React",
     "ui",
@@ -57,17 +58,31 @@
     "react-dom": "^18.2.0",
     "babel-loader": "^9.1.3",
     "eslint": "^8.56.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.1.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-react": "^7.34.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
     "eslint-plugin-storybook": "^0.8.0",
+    "prettier": "^3.1.1",
     "storybook": "^7.6.17",
     "typescript": "^5.2.2",
     "vite": "^5.1.4",
     "vite-plugin-dts": "^3.7.3",
     "vite-tsconfig-paths": "^4.3.1"
+  },
+  "homepage": "https://github.com/jjou33/hippo-ui-store",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjou33/hippo-ui-store.git",
+    "directory": "/"
+  },
+  "bugs": {
+    "url": "https://github.com/jjou33/hippo-ui-store/issues"
   },
   "license": "MIT",
   "publishConfig": {

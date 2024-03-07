@@ -1,21 +1,21 @@
-import { resolve } from 'path';
+import { resolve } from 'path'
 
-import react from '@vitejs/plugin-react';
-import { defineConfig } from 'vite';
-import dts from 'vite-plugin-dts';
-import tsconfigPaths from 'vite-tsconfig-paths';
+import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite'
+import dts from 'vite-plugin-dts'
+import tsconfigPaths from 'vite-tsconfig-paths'
 
-import pkg from './package.json';
+import pkg from './package.json'
 
 const makeExternalPredicate = (externalArr: string[]) => {
   if (externalArr.length === 0) {
-    return () => false;
+    return () => false
   }
-  const pattern = new RegExp(`^(${externalArr.join('|')})($|/)`);
-  return (id: string) => pattern.test(id);
-};
+  const pattern = new RegExp(`^(${externalArr.join('|')})($|/)`)
+  return (id: string) => pattern.test(id)
+}
 
-const externals = makeExternalPredicate(Object.keys(pkg.peerDependencies));
+const externals = makeExternalPredicate(Object.keys(pkg.peerDependencies))
 
 export default defineConfig({
   build: {
@@ -53,8 +53,8 @@ export default defineConfig({
       },
       {
         find: '@assets',
-        replacement: resolve(__dirname, './src/assets')
-      }
-    ]
-  }
-});
+        replacement: resolve(__dirname, './src/assets'),
+      },
+    ],
+  },
+})
