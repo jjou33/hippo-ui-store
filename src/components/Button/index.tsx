@@ -1,12 +1,11 @@
-import { ButtonHTMLAttributes } from 'react'
-import { ButtonContainer } from './styled'
+import { ButtonHTMLAttributes, PropsWithChildren } from 'react'
 
+import { ButtonContainer } from './styled'
 import type { ButtonVariant } from '@/types/common'
 
-export interface ButtonBaseProps {
+export interface ButtonBaseProps extends PropsWithChildren {
   variant?: ButtonVariant
   label?: string
-  children: TextNode
 }
 
 type ButtonProps = ButtonBaseProps & ButtonHTMLAttributes<HTMLButtonElement>
@@ -28,8 +27,8 @@ const Button = ({
   }
 
   return (
-    <ButtonContainer {...props} variantSet={variantSet} label={label}>
-      {'BUTTON'}
+    <ButtonContainer {...props} variantSet={variantSet} aria-label={label}>
+      {children}
     </ButtonContainer>
   )
 }

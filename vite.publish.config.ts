@@ -33,7 +33,6 @@ export default defineConfig({
           '@emotion/react/jsx-runtime': 'jsxRuntime',
           '@emotion/react': 'react',
           '@emotion/styled': 'styled',
-          'react/jsx-runtime': 'jsxRuntime',
         },
       },
     },
@@ -54,6 +53,10 @@ export default defineConfig({
       {
         find: '@assets',
         replacement: resolve(__dirname, './src/assets'),
+      },
+      {
+        find: '@constants',
+        replacement: resolve(__dirname, './src/constants'),
       },
       {
         find: '@',
